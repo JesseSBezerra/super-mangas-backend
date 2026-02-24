@@ -1,0 +1,521 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-02-23T22:25:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_mangas_list",
+      "parentId": "fld_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/mangas?page=0&size=20&sort=id,desc",
+      "name": "List All Mangas (Paginated)",
+      "description": "Lista todos os mangás com paginação",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "page",
+          "value": "0",
+          "description": "Número da página (começa em 0)"
+        },
+        {
+          "name": "size",
+          "value": "20",
+          "description": "Quantidade de itens por página"
+        },
+        {
+          "name": "sort",
+          "value": "id,desc",
+          "description": "Campo e direção de ordenação"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_manga_by_id",
+      "parentId": "fld_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/mangas/1",
+      "name": "Get Manga by ID",
+      "description": "Busca um mangá específico por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_manga_search",
+      "parentId": "fld_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/mangas/search?title=naruto&page=0&size=10",
+      "name": "Search Mangas by Title",
+      "description": "Busca mangás por título (case insensitive)",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "title",
+          "value": "naruto",
+          "description": "Título ou parte do título do mangá"
+        },
+        {
+          "name": "page",
+          "value": "0",
+          "description": "Número da página"
+        },
+        {
+          "name": "size",
+          "value": "10",
+          "description": "Quantidade de itens"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_chapters_by_manga",
+      "parentId": "fld_chapters",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/chapters/manga/1?page=0&size=20",
+      "name": "List Chapters by Manga ID (Paginated)",
+      "description": "Lista capítulos de um mangá específico com paginação",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "page",
+          "value": "0",
+          "description": "Número da página"
+        },
+        {
+          "name": "size",
+          "value": "20",
+          "description": "Quantidade de itens"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729200000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_all_chapters_by_manga",
+      "parentId": "fld_chapters",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/chapters/manga/1/all",
+      "name": "List All Chapters by Manga ID",
+      "description": "Lista todos os capítulos de um mangá (sem paginação)",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729100000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_chapter_by_id",
+      "parentId": "fld_chapters",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/chapters/1",
+      "name": "Get Chapter by ID",
+      "description": "Busca um capítulo específico por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708729000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_pages_by_chapter",
+      "parentId": "fld_pages",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/pages/chapter/1?page=0&size=50",
+      "name": "List Pages by Chapter ID (Paginated)",
+      "description": "Lista páginas de um capítulo específico com paginação",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "page",
+          "value": "0",
+          "description": "Número da página"
+        },
+        {
+          "name": "size",
+          "value": "50",
+          "description": "Quantidade de itens"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_all_pages_by_chapter",
+      "parentId": "fld_pages",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/pages/chapter/1/all",
+      "name": "List All Pages by Chapter ID",
+      "description": "Lista todas as páginas de um capítulo (sem paginação)",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_page_by_id",
+      "parentId": "fld_pages",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/pages/1",
+      "name": "Get Page by ID",
+      "description": "Busca uma página específica por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_genres_by_manga",
+      "parentId": "fld_genres",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/genres/manga/1",
+      "name": "List Genres by Manga ID",
+      "description": "Lista todos os gêneros de um mangá específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_mangas_by_genre",
+      "parentId": "fld_genres",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/genres/search?genre=Ação",
+      "name": "Search Mangas by Genre",
+      "description": "Busca mangás por gênero específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "genre",
+          "value": "Ação",
+          "description": "Nome do gênero"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_metadata_by_manga",
+      "parentId": "fld_metadata",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/metadata/manga/1",
+      "name": "List Metadata by Manga ID",
+      "description": "Lista todos os metadados de um mangá específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_metadata_by_key",
+      "parentId": "fld_metadata",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "url": "{{ _.base_url }}/api/metadata/manga/1/key/author",
+      "name": "Get Metadata by Manga ID and Key",
+      "description": "Busca um metadado específico por ID do mangá e chave",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708728300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_mangas",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Mangas",
+      "description": "Endpoints relacionados aos mangás",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1708729500000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_chapters",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Chapters",
+      "description": "Endpoints relacionados aos capítulos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1708729400000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_pages",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Pages",
+      "description": "Endpoints relacionados às páginas",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1708729300000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_genres",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Genres",
+      "description": "Endpoints relacionados aos gêneros",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1708729200000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_metadata",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Metadata",
+      "description": "Endpoints relacionados aos metadados",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1708729100000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_super_mangas",
+      "parentId": null,
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Super Mangas API",
+      "description": "API REST para leitura de dados do Super Mangas",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_super_mangas",
+      "modified": 1708729500000,
+      "created": 1708729500000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1708729500000,
+      "_type": "environment"
+    }
+  ]
+}
