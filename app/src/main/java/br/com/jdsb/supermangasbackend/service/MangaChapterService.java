@@ -27,7 +27,7 @@ public class MangaChapterService {
     }
 
     public List<MangaChapterDTO> getAllChaptersByMangaId(Long mangaId) {
-        return mangaChapterRepository.findByMangaIdOrderByChapterNumberDesc(mangaId)
+        return mangaChapterRepository.findByMangaIdOrderByIdDesc(mangaId)
                 .stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());

@@ -21,7 +21,7 @@ public class MangaChapterController {
     @GetMapping("/manga/{mangaId}")
     public ResponseEntity<Page<MangaChapterDTO>> getChaptersByMangaId(
             @PathVariable Long mangaId,
-            @PageableDefault(size = 20, sort = "chapterNumber") Pageable pageable) {
+            @PageableDefault(size = 20, sort = "id", direction = org.springframework.data.domain.Sort.Direction.DESC) Pageable pageable) {
         Page<MangaChapterDTO> chapters = mangaChapterService.getChaptersByMangaId(mangaId, pageable);
         return ResponseEntity.ok(chapters);
     }

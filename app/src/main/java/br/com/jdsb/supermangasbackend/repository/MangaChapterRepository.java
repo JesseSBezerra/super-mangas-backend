@@ -13,7 +13,7 @@ public interface MangaChapterRepository extends JpaRepository<MangaChapter, Long
 
     Page<MangaChapter> findByMangaId(Long mangaId, Pageable pageable);
 
-    List<MangaChapter> findByMangaIdOrderByChapterNumberDesc(Long mangaId);
+    List<MangaChapter> findByMangaIdOrderByIdDesc(Long mangaId);
 
     Long countByMangaId(Long mangaId);
 }
